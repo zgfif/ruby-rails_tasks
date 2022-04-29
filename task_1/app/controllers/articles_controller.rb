@@ -15,6 +15,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     # Let's imagine that writing to the database lasts at least 20 seconds :(
+    # !!!Don't change this line!!!
     sleep(20)
 
     if @article.save
