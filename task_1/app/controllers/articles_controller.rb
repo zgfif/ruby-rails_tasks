@@ -12,10 +12,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
-
-    # Let's imagine that writing to the database lasts at least 20 seconds :(
-    sleep(20)
+    # let's imagine that for the parameters you need to specify "preparation" on an external service
+    prepared_params = ExternalCall.prepare_article_params(article_params)
+    @article = Article.new(prepared_params)
 
     if @article.save
       redirect_to @article

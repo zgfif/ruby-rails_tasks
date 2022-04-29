@@ -7,5 +7,6 @@ Given simple application for viewing and creating articles. The request to creat
 Solve the issue so that the request is executed (the article is created), and the user can work with the application at that time.
 
 ## Rules
-1. Ruby/Rails version doesn't matter
-2. Gems are allowed
+1. Using `ExternalCall` is mandatory. Modification of code in this module is not allowed
+2. Ruby/Rails version doesn't matter
+3. Gems are allowed
