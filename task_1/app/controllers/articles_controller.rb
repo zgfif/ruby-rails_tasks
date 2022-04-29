@@ -12,8 +12,11 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    # let's imagine that for the parameters you need to specify "preparation" on an external service
-    prepared_params = ExternalCall.prepare_article_params(article_params)
+    # Next line of code we know will take some time to process
+    # In real life this could be a call for example to generate a report, perform a complex SQL query etc.
+    # For the sake of testing the method contains only sleep(20)
+
+    prepared_params = ExternalCall.run_complex_sql_query(article_params)
     @article = Article.new(prepared_params)
 
     if @article.save
