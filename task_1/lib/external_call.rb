@@ -1,7 +1,8 @@
+# This module should not be updated
+
 module ExternalCall
   class << self
-    def prepare_article_params(params = {})
-      # Don't remove this line!
+    def run_complex_sql_query(params = {})
       sleep(20)
 
       params
